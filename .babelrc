@@ -1,0 +1,11 @@
+{
+  "presets": [
+    [
+      "env",
+      "stage-3"
+    ]
+  ],
+  "plugins": [
+    "transform-object-rest-spread" //如果是需要支持 jsx 这个东西要单独装一下。
+  ]
+}
