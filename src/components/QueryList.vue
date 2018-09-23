@@ -42,6 +42,16 @@ export default {
     handleClick(item) {
       this.changeInputValue(this.cityMaps[item]);
     }
-  }
+  },
+  created(){
+      console.log("createdQueryList")
+  },
+    mounted(){
+        console.log("mountedQueryList")
+    }
+    ,
+    beforeCreate(){
+        console.log("beforeCreateQueryList")
+    },
 };
 </script>
