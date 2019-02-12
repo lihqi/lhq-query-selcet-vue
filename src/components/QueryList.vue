@@ -16,17 +16,27 @@ li:hover {
   background: #9cd9ff;
   cursor: pointer;
 }
+.query-list {
+  width: 100%;
+  max-height: 300px;
+  overflow: auto;
+}
 </style>
 
 <template>
-    <div>
-        <ul>
-            <li class="clearfix" v-for="(item,index) in getQueryList" :key="index" @click="handleClick(item)">
-                <div class="name-text">{{cityMaps[item].name}}</div>
-                <div class="string-text">{{cityMaps[item].string}}</div>
-            </li>
-        </ul>
-    </div>
+  <div class="query-list">
+    <ul>
+      <li
+        class="clearfix"
+        v-for="(item,index) in getQueryList"
+        :key="index"
+        @click="handleClick(item)"
+      >
+        <div class="name-text">{{cityMaps[item].name}}</div>
+        <div class="string-text">{{cityMaps[item].string}}</div>
+      </li>
+    </ul>
+  </div>
 </template>
 <script>
 import { mapState, mapGetters, mapMutations } from "vuex";
@@ -43,15 +53,14 @@ export default {
       this.changeInputValue(this.cityMaps[item]);
     }
   },
-  created(){
-      console.log("createdQueryList")
+  created() {
+    console.log("createdQueryList");
   },
-    mounted(){
-        console.log("mountedQueryList")
-    }
-    ,
-    beforeCreate(){
-        console.log("beforeCreateQueryList")
-    },
+  mounted() {
+    console.log("mountedQueryList");
+  },
+  beforeCreate() {
+    console.log("beforeCreateQueryList");
+  }
 };
 </script>
